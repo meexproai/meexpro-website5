@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEEXPRO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #3b82f6;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    nav {
+      background: #2563eb;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+    }
+    nav a:hover {
+      background: #1e40af;
+      border-radius: 4px;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    }
+    section h2 {
+      color: #3b82f6;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    #searchInput {
+      width: 300px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 1rem;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    #searchResults {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    article {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MEEXPRO</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="home">
+    <h2>Search</h2>
+    <input id="searchInput" placeholder="Search something..." />
+    <button onclick="handleSearch()">Search</button>
+    <div id="searchResults"></div>
+  </section>
+
+  <section id="about">
+    <h2>About MEEXPRO</h2>
+    <p>MEEXPRO is your go-to source for the latest news, technology updates, and insightful articles crafted for curious minds and professionals alike.</p>
+  </section>
+
+  <section id="news">
+    <h2>Latest Post</h2>
+    <article>
+      <h3>The Future of Artificial Intelligence: Transforming Our World</h3>
+      <p>
+        Artificial Intelligence (AI) has rapidly evolved over the past few decades, transforming the way we live, work, and communicate. From voice assistants like Siri and Alexa to autonomous vehicles and smart healthcare diagnostics, AI technologies are increasingly integrated into our daily lives.
+      </p>
+      <p>
+        The potential of AI goes far beyond convenience; it is poised to revolutionize industries by enhancing productivity, enabling better decision-making, and creating innovative solutions to complex problems. For instance, AI-driven data analysis allows businesses to uncover hidden patterns and predict market trends, while machine learning algorithms enable personalized education and targeted medical treatments.
+      </p>
+      <p>
+        However, with these advancements come challenges. Ethical concerns surrounding privacy, data security, and job displacement are at the forefront of discussions among technologists, policymakers, and society. It is imperative to develop responsible AI frameworks that prioritize transparency, accountability, and inclusivity.
+      </p>
+      <p>
+        Governments and organizations worldwide are investing heavily in AI research to harness its benefits while mitigating risks. Collaborative efforts between academia, industry, and regulatory bodies will be crucial to shaping AI’s trajectory in a way that aligns with human values and promotes sustainable development.
+      </p>
+      <p>
+        Looking ahead, AI holds tremendous promise in addressing global challenges such as climate change, healthcare disparities, and resource management. By leveraging AI technologies thoughtfully, we can unlock new opportunities that enhance quality of life and drive economic growth.
+      </p>
+      <p>
+        In conclusion, the future of artificial intelligence is bright but requires mindful stewardship. Embracing innovation while ensuring ethical considerations will pave the way for an inclusive and prosperous society powered by intelligent machines.
+      </p>
+    </article>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out at <a href="mailto:contact@meexpro.com">contact@meexpro.com</a> or follow us on social media.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 MEEXPRO. All rights reserved.
+  </footer>
+
+  <script>
+    function handleSearch() {
+      const input = document.getElementById('searchInput').value.trim();
+      const results = document.getElementById('searchResults');
+      if (input === '') {
+        results.innerHTML = '<p>Please enter a search term.</p>';
+      } else {
+        results.innerHTML = `<p>You searched for: <strong>${input}</strong></p>`;
+      }
+    }
+  </script>
+</body>
+</html>
